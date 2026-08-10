@@ -101,9 +101,12 @@ input, select, textarea {
 	body {
 		background-color: #2e3141;
 		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-		background-size: auto, cover;
-		background-attachment: fixed, fixed;
-		background-position: center, center;
+		background-size: auto,
+ cover;
+		background-attachment: fixed,
+ fixed;
+		background-position: center,
+ center;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -3464,8 +3467,10 @@ input, select, textarea {
 				padding: 7em 0 8.25em 0 ;
 				background-color: #2e3141;
 				background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-				background-size: auto, cover;
-				background-position: center, center;
+				background-size: auto,
+ cover;
+				background-position: center,
+ center;
 				margin-bottom: -6.5em;
 			}
 
@@ -3574,8 +3579,10 @@ input, select, textarea {
 			padding: 9em 0 6.25em 0 ;
 			background-color: #2e3141;
 			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-			background-size: auto, cover;
-			background-position: center, 0% 30%;
+			background-size: auto,
+ cover;
+			background-position: center,
+ 0% 30%;
 			margin-bottom: -6.5em;
 		}
 
@@ -3585,8 +3592,10 @@ input, select, textarea {
 
 		#wrapper > header {
 			padding: 11em 3em 7.375em 3em ;
-			background-size: auto, cover;
-			background-position: center, 0% 0%;
+			background-size: auto,
+ cover;
+			background-position: center,
+ 0% 0%;
 			margin-bottom: -4.75em;
 		}
 
@@ -3600,7 +3609,8 @@ input, select, textarea {
 
 		#wrapper > header {
 			padding: 6.5em 2em 3em 2em ;
-			background-size: auto, 125%;
+			background-size: auto,
+ 125%;
 			margin-bottom: -2.5em;
 		}
 
@@ -4062,8 +4072,10 @@ input, select, textarea {
 		#footer {
 			background-color: #2e3141;
 			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
-			background-size: auto, cover;
-			background-position: center, center;
+			background-size: auto,
+ cover;
+			background-position: center,
+ center;
 			margin-top: -6.5em;
 			padding-top: 6.5em;
 		}
@@ -4142,3 +4154,179 @@ input, select, textarea {
 		}
 
 	}
+
+
+/* ===================================================
+   PERSONALIZACIÓN CUTE - ROSA & MORADO (Sofia Rojas)
+   =================================================== */
+
+/* 1. Tipografía redondeada y limpia (Nunito) */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+body, input, select, textarea {
+	font-family: 'Nunito', sans-serif !important;
+}
+
+/* 2. Fondos principales en Tonos Morado & Pasteles */
+#header {
+	background-color: #1e0f33 !important;
+	border-bottom: 2px solid #ff9ebb !important;
+}
+
+#banner {
+	background-color: #2b1045 !important;
+	background-image: linear-gradient(135deg, rgba(43, 16, 69, 0.92), rgba(110, 30, 100, 0.88)) !important;
+}
+
+.wrapper.style1 {
+	background-color: #1e0f33 !important;
+}
+
+.wrapper.style2 {
+	background-color: #2d124a !important;
+}
+
+#footer {
+	background-color: #150826 !important;
+	border-top: 2px solid #ff9ebb !important;
+}
+
+/* 3. Textos, Enlaces y Títulos */
+a {
+	color: #ff85b3 !important;
+	transition: all 0.3s ease;
+}
+
+a:hover {
+	color: #ffb3d1 !important;
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, .major {
+	color: #ffffff !important;
+	border-bottom: 3px dotted #ff66a3 !important; /* Línea punteada bonita */
+}
+
+/* 4. Botones Estilo Cute (Redondeados y con animación) */
+.button, input[type="submit"] {
+	border-radius: 25px !important; /* Bordes redondeados suavemente */
+	font-weight: 700 !important;
+	letter-spacing: 0.5px;
+	transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.button.primary, input[type="submit"] {
+	background-color: #ff529a !important;
+	color: #ffffff !important;
+	border: none !important;
+	box-shadow: 0 4px 15px rgba(255, 82, 154, 0.4) !important;
+}
+
+/* Efecto al pasar el cursor (efecto rebote cute) */
+.button.primary:hover, input[type="submit"]:hover {
+	background-color: #ff3385 !important;
+	transform: translateY(-3px) scale(1.02);
+	box-shadow: 0 6px 20px rgba(255, 82, 154, 0.6) !important;
+}
+
+/* 5. Tarjetas de Proyectos y Contenedores */
+.features article {
+	background: rgba(255, 255, 255, 0.04) !important;
+	border-radius: 20px !important;
+	padding: 20px !important;
+	border: 1px solid rgba(255, 133, 179, 0.2) !important;
+	transition: transform 0.3s ease, border-color 0.3s ease !important;
+}
+
+.features article:hover {
+	transform: translateY(-5px);
+	border-color: #ff85b3 !important;
+	box-shadow: 0 8px 25px rgba(255, 133, 179, 0.25) !important;
+}
+
+.features article .image img {
+	border-radius: 15px !important;
+}
+
+/* 6. Iconos con brillo */
+.logo .icon, .icon.solid, .icon.brands {
+	color: #ff9ebb !important;
+}
+
+
+/* ===================================================
+   ESTILOS PARA MODO CLARO (LIGHT MODE)
+   =================================================== */
+
+body.light-mode {
+	background-color: #fcf4f8 !important;
+	color: #4a3b52 !important;
+}
+
+body.light-mode #page-wrapper {
+	background-color: #fcf4f8 !important;
+}
+
+body.light-mode #header {
+	background-color: #ffffff !important;
+	border-bottom: 2px solid #ffb3d1 !important;
+}
+
+body.light-mode #header h1 a {
+	color: #6a1b9a !important;
+}
+
+body.light-mode #banner {
+	background-color: #f7e8f3 !important;
+	background-image: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%) !important;
+}
+
+body.light-mode #banner h2, 
+body.light-mode #banner p {
+	color: #4a2c5e !important;
+}
+
+body.light-mode .wrapper.style1 {
+	background-color: #fff0f6 !important;
+}
+
+body.light-mode .wrapper.style2 {
+	background-color: #f8eaf6 !important;
+}
+
+body.light-mode #footer {
+	background-color: #f3d9fa !important;
+	color: #3a224c !important;
+}
+
+body.light-mode h1, 
+body.light-mode h2, 
+body.light-mode h3, 
+body.light-mode h4, 
+body.light-mode .major {
+	color: #6a1b9a !important;
+	border-bottom-color: #ff529a !important;
+}
+
+body.light-mode p, 
+body.light-mode li {
+	color: #4a3b52 !important;
+}
+
+body.light-mode .features article {
+	background: #ffffff !important;
+	border: 1px solid #ffccd5 !important;
+	box-shadow: 0 4px 15px rgba(255, 182, 193, 0.3) !important;
+}
+
+body.light-mode .features article h3 {
+	color: #8e24aa !important;
+}
+
+body.light-mode input[type="text"], 
+body.light-mode input[type="email"], 
+body.light-mode textarea {
+	background-color: #ffffff !important;
+	color: #333333 !important;
+	border: 1px solid #ffb3d1 !important;
+}
