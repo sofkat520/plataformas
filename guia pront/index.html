@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Diálogo y Desarrollo | Análisis para la Gobernanza y el Desarrollo Sostenible</title>
+  <meta name="description" content="Diálogo y Desarrollo: investigaciones, análisis, artículos de opinión y espacios de diálogo sobre política, gobernanza y sostenibilidad ambiental en el Perú.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Diálogo y Desarrollo">
+  <meta property="og:description" content="Análisis para la Gobernanza y el Desarrollo Sostenible en el Perú.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=1600&q=85">
+  <meta property="og:image:alt" content="Paisaje de montaña de los Andes peruanos">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bosque: '#1a472a',
+            marino: '#0f3460',
+            hueso: '#faf9f6',
+            oscuro: '#2d2d2d',
+            terracota: '#c75b39'
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Inter', 'Arial', 'sans-serif']
+          },
+          boxShadow: {
+            editorial: '0 18px 50px rgba(26, 71, 42, 0.10)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #faf9f6;
+      color: #2d2d2d;
+      font-family: 'Inter', sans-serif;
+    }
+
+    ::selection {
+      background: #1a472a;
+      color: #fff;
+    }
+
+    .font-serif {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    .hero-overlay {
+      background:
+        linear-gradient(90deg, rgba(8, 30, 18, .90) 0%, rgba(15, 52, 96, .64) 54%, rgba(15, 52, 96, .20) 100%);
+    }
+
+    .article-card {
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .article-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 45px rgba(26, 71, 42, .13);
+    }
+
+    .media-card img {
+      transition: transform .45s ease;
+    }
+
+    .media-card:hover img {
+      transform: scale(1.07);
+    }
+
+    .media-overlay {
+      background: linear-gradient(to top, rgba(0,0,0,.85), rgba(0,0,0,.05));
+    }
+
+    .focus-ring:focus-visible,
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible {
+      outline: 3px solid #c75b39;
+      outline-offset: 3px;
+    }
+
+    .menu-line {
+      transition: transform .25s ease, opacity .25s ease;
+    }
+
+    .menu-open .line-one {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-open .line-two {
+      opacity: 0;
+    }
+
+    .menu-open .line-three {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .podcast-item.active {
+      background: #eaf1ec;
+      border-color: #1a472a;
+    }
+
+    .podcast-item.active .episode-number {
+      background: #1a472a;
+      color: white;
+    }
+
+    .play-icon {
+      transition: transform .2s ease;
+    }
+
+    button:hover .play-icon {
+      transform: scale(1.08);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="min-h-screen">
+
+  <!-- =========================================================
+       HEADER
+  ========================================================== -->
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-white/95 shadow-sm backdrop-blur-md">
+    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
+
+      <a href="#inicio"
+         class="focus-ring flex items-center gap-3 rounded-md"
+         aria-label="Diálogo y Desarrollo - Ir al inicio">
+
+        <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-bosque text-white">
+          <svg aria-hidden="true" viewBox="0 0 40 40" class="h-7 w-7 fill-none stroke-current" stroke-width="2">
+            <path d="M20 31V9"/>
+            <path d="M20 14c-5-5-10-4-13-1 3 5 8 7 13 6"/>
+            <path d="M20 19c5-5 10-4 13-1-3 5-8 7-13 6"/>
+            <path d="M20 25c-4-4-8-3-11 0 3 4 7 5 11 4"/>
+            <path d="M20 25c4-4 8-3 11 0-3 4-7 5-11 4"/>
+          </svg>
+        </span>
+
+        <span>
+          <span class="block font-serif text-lg font-bold leading-none text-bosque sm:text-xl">
+            Diálogo y Desarrollo
+          </span>
+          <span class="mt-1 hidden text-[9px] font-semibold uppercase tracking-[.18em] text-marino sm:block">
+            Investigación · Diálogo · Futuro
+          </span>
+        </span>
+      </a>
+
+      <nav class="hidden lg:block" aria-label="Navegación principal">
+        <ul class="flex items-center gap-7">
+          <li><a class="focus-ring rounded text-sm font-semibold text-bosque hover:text-terracota" href="#inicio">Inicio</a></li>
+          <li><a class="focus-ring rounded text-sm font-semibold text-gray-700 hover:text-terracota" href="#publicaciones">Actualidad</a></li>
+          <li><a class="focus-ring rounded text-sm font-semibold text-gray-700 hover:text-terracota" href="#podcasts">Podcasts</a></li>
+          <li><a class="focus-ring rounded text-sm font-semibold text-gray-700 hover:text-terracota" href="#multimedia">Multimedia</a></li>
+          <li><a class="focus-ring rounded text-sm font-semibold text-gray-700 hover:text-terracota" href="#nosotros">Nosotros</a></li>
+          <li><a class="focus-ring rounded text-sm font-semibold text-gray-700 hover:text-terracota" href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="hidden items-center gap-3 lg:flex">
+        <button id="searchButton"
+                type="button"
+                class="focus-ring rounded-full p-2 text-bosque hover:bg-green-50"
+                aria-label="Abrir búsqueda"
+                aria-expanded="false"
+                aria-controls="searchPanel">
+          <svg aria-hidden="true" class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="m20 20-4-4"></path>
+          </svg>
+        </button>
+
+        <a href="#publicaciones"
+           class="focus-ring rounded-full bg-bosque px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-marino">
+          Explorar
+        </a>
+      </div>
+
+      <button id="menuButton"
+              type="button"
+              class="focus-ring rounded-md p-2 lg:hidden"
+              aria-label="Abrir menú de navegación"
+              aria-expanded="false"
+              aria-controls="mobileMenu">
+        <span class="block h-0.5 w-6 bg-bosque menu-line line-one"></span>
+        <span class="mt-1.5 block h-0.5 w-6 bg-bosque menu-line line-two"></span>
+        <span class="mt-1.5 block h-0.5 w-6 bg-bosque menu-line line-three"></span>
+      </button>
+    </div>
+
+    <!-- Search panel -->
+    <div id="searchPanel" class="hidden border-t border-gray-200 bg-white">
+      <form id="searchForm" class="mx-auto flex max-w-3xl gap-3 px-5 py-5" role="search">
+        <label for="searchInput" class="sr-only">Buscar publicaciones</label>
+        <input id="searchInput"
+               type="search"
+               placeholder="Buscar investigaciones, artículos, temas..."
+               class="focus-ring min-w-0 flex-1 rounded-lg border border-gray-300 bg-white px-4 py-3 text-sm"
+               autocomplete="off">
+        <button type="submit"
+                class="focus-ring rounded-lg bg-bosque px-5 py-3 text-sm font-semibold text-white hover:bg-marino">
+          Buscar
+        </button>
+      </form>
+      <p id="searchMessage" class="mx-auto hidden max-w-3xl px-5 pb-4 text-sm text-marino"></p>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden border-t border-gray-200 bg-white lg:hidden">
+      <nav class="mx-auto max-w-7xl px-5 py-5" aria-label="Navegación móvil">
+        <ul class="space-y-1">
+          <li><a class="focus-ring block rounded-lg px-4 py-3 font-semibold hover:bg-green-50" href="#inicio">Inicio</a></li>
+          <li><a class="focus-ring block rounded-lg px-4 py-3 font-semibold hover:bg-green-50" href="#publicaciones">Actualidad</a></li>
+          <li><a class="focus-ring block rounded-lg px-4 py-3 font-semibold hover:bg-green-50" href="#podcasts">Podcasts</a></li>
+          <li><a class="focus-ring block rounded-lg px-4 py-3 font-semibold hover:bg-green-50" href="#multimedia">Multimedia</a></li>
+          <li><a class="focus-ring block rounded-lg px-4 py-3 font-semibold hover:bg-green-50" href="#nosotros">Nosotros</a></li>
+          <li><a class="focus-ring block rounded-lg px-4 py-3 font-semibold hover:bg-green-50" href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <main id="inicio">
+
+    <!-- =======================================================
+         HERO
+    ======================================================== -->
+    <section class="relative flex min-h-[680px] items-center overflow-hidden pt-20">
+      <img
+        src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=2200&q=90"
+        alt="Paisaje montañoso de los Andes peruanos"
+        class="absolute inset-0 h-full w-full object-cover"
+      >
+
+      <div class="hero-overlay absolute inset-0"></div>
+
+      <div class="relative mx-auto w-full max-w-7xl px-5 py-24 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+
+          <div class="mb-7 flex items-center gap-3 text-sm font-bold uppercase tracking-[.18em] text-white">
+            <span class="h-px w-10 bg-terracota"></span>
+            Investigación independiente · Perú
+          </div>
+
+          <h1 class="font-serif text-5xl font-bold leading-[1.04] tracking-tight text-white sm:text-6xl lg:text-7xl">
+            Análisis para la Gobernanza y el Desarrollo Sostenible
+          </h1>
+
+          <p class="mt-7 max-w-2xl text-lg leading-8 text-white/90 sm:text-xl">
+            Investigaciones, artículos de opinión y espacios de diálogo sobre el futuro político y ambiental del Perú.
+          </p>
+
+          <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+            <a href="#publicaciones"
+               class="focus-ring inline-flex items-center justify-center gap-3 rounded-full bg-terracota px-7 py-4 text-sm font-bold text-white transition hover:bg-[#a94b2e]">
+              Explorar publicaciones
+              <svg aria-hidden="true" class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                <path d="M5 12h14"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg>
+            </a>
+
+            <a href="#nosotros"
+               class="focus-ring inline-flex items-center justify-center rounded-full border border-white/70 px-7 py-4 text-sm font-bold text-white transition hover:bg-white hover:text-bosque">
+              Conoce nuestra misión
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-hueso to-transparent"></div>
+    </section>
+
+
+    <!-- =======================================================
+         INTRO / NOSOTROS
+    ======================================================== -->
+    <section id="nosotros" class="bg-hueso py-20 sm:py-24">
+      <div class="mx-auto grid max-w-7xl gap-12 px-5 sm:px-6 lg:grid-cols-[1.15fr_.85fr] lg:px-8">
+
+        <div>
+          <span class="text-sm font-bold uppercase tracking-[.18em] text-terracota">
+            Una mirada independiente
+          </span>
+
+          <h2 class="mt-4 max-w-3xl font-serif text-4xl font-bold leading-tight text-bosque sm:text-5xl">
+            Pensar el Perú desde la evidencia, el diálogo y el territorio.
+          </h2>
+
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-gray-600">
+            Diálogo y Desarrollo es una organización peruana sin fines de lucro que promueve
+            el análisis crítico sobre política, gobernanza, economía y sostenibilidad ambiental.
+          </p>
+
+          <p class="mt-4 max-w-2xl leading-7 text-gray-600">
+            Generamos conocimiento accesible y riguroso para investigadores, responsables de
+            políticas públicas, estudiantes y ciudadanos que buscan comprender los desafíos
+            estructurales del país.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 self-center">
+          <div class="rounded-2xl bg-bosque p-6 text-white">
+            <span class="font-serif text-4xl font-bold">01</span>
+            <p class="mt-3 text-sm font-semibold">Investigación independiente</p>
+          </div>
+
+          <div class="mt-8 rounded-2xl bg-marino p-6 text-white">
+            <span class="font-serif text-4xl font-bold">02</span>
+            <p class="mt-3 text-sm font-semibold">Diálogo informado</p>
+          </div>
+
+          <div class="-mt-8 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+            <span class="font-serif text-4xl font-bold text-terracota">03</span>
+            <p class="mt-3 text-sm font-semibold text-gray-800">Perspectiva territorial</p>
+          </div>
+
+          <div class="rounded-2xl bg-terracota p-6 text-white">
+            <span class="font-serif text-4xl font-bold">04</span>
+            <p class="mt-3 text-sm font-semibold">Desarrollo sostenible</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =======================================================
+         PUBLICACIONES
+    ======================================================== -->
+    <section id="publicaciones" class="bg-white py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+        <div class="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div>
+            <span class="text-sm font-bold uppercase tracking-[.18em] text-terracota">
+              Actualidad
+            </span>
+            <h2 class="mt-3 font-serif text-4xl font-bold text-bosque sm:text-5xl">
+              Últimas publicaciones
+            </h2>
+            <p class="mt-4 max-w-2xl text-gray-600">
+              Análisis y perspectivas para comprender los principales desafíos del Perú contemporáneo.
+            </p>
+          </div>
+
+          <button id="showAllButton"
+                  type="button"
+                  class="focus-ring self-start rounded-full border border-bosque px-5 py-2.5 text-sm font-bold text-bosque hover:bg-bosque hover:text-white md:self-auto">
+            Ver todas
+          </button>
+        </div>
+
+        <div id="articlesGrid" class="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+
+          <!-- Article 1 -->
+          <article class="article-card overflow-hidden rounded-2xl border border-gray-200 bg-white">
+            <div class="relative h-56 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=80"
+                   alt="Agricultura en un paisaje montañoso de los Andes"
+                   class="h-full w-full object-cover">
+              <span class="absolute left-4 top-4 rounded-full bg-bosque px-3 py-1 text-xs font-bold text-white">
+                Medio Ambiente
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="text-xs font-semibold uppercase tracking-wider text-gray-500">Análisis</div>
+              <h3 class="mt-2 font-serif text-xl font-bold leading-snug text-bosque">
+                Impacto del cambio climático en la agricultura andina
+              </h3>
+              <p class="mt-3 line-clamp-2 text-sm leading-6 text-gray-600">
+                Una mirada a los efectos del cambio climático sobre los sistemas agrícolas y las comunidades altoandinas.
+              </p>
+              <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-4 text-xs text-gray-500">
+                <span>María Quispe</span>
+                <span>12 ago. 2026 · 7 min</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="article-card overflow-hidden rounded-2xl border border-gray-200 bg-white">
+            <div class="relative h-56 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1580130732478-4e339fb6836f?auto=format&fit=crop&w=900&q=80"
+                   alt="Edificio institucional representativo de la actividad política"
+                   class="h-full w-full object-cover">
+              <span class="absolute left-4 top-4 rounded-full bg-marino px-3 py-1 text-xs font-bold text-white">
+                Política
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="text-xs font-semibold uppercase tracking-wider text-gray-500">Investigación</div>
+              <h3 class="mt-2 font-serif text-xl font-bold leading-snug text-bosque">
+                Los retos pendientes de la reforma política peruana
+              </h3>
+              <p class="mt-3 line-clamp-2 text-sm leading-6 text-gray-600">
+                Instituciones, representación y participación ciudadana en una democracia que busca recuperar confianza.
+              </p>
+              <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-4 text-xs text-gray-500">
+                <span>Jorge Salazar</span>
+                <span>08 ago. 2026 · 9 min</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="article-card overflow-hidden rounded-2xl border border-gray-200 bg-white">
+            <div class="relative h-56 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1547683905-f686c993aae5?auto=format&fit=crop&w=900&q=80"
+                   alt="Costa peruana y paisaje árido relacionado con la gestión del agua"
+                   class="h-full w-full object-cover">
+              <span class="absolute left-4 top-4 rounded-full bg-terracota px-3 py-1 text-xs font-bold text-white">
+                Economía
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="text-xs font-semibold uppercase tracking-wider text-gray-500">Políticas públicas</div>
+              <h3 class="mt-2 font-serif text-xl font-bold leading-snug text-bosque">
+                Desalinización y gestión del agua en la costa peruana
+              </h3>
+              <p class="mt-3 line-clamp-2 text-sm leading-6 text-gray-600">
+                Oportunidades, costos y desafíos de incorporar nuevas fuentes de agua para ciudades costeras.
+              </p>
+              <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-4 text-xs text-gray-500">
+                <span>Lucía Herrera</span>
+                <span>03 ago. 2026 · 6 min</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 4 -->
+          <article class="article-card overflow-hidden rounded-2xl border border-gray-200 bg-white">
+            <div class="relative h-56 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80"
+                   alt="Paisaje natural peruano con vegetación y montañas"
+                   class="h-full w-full object-cover">
+              <span class="absolute left-4 top-4 rounded-full bg-bosque px-3 py-1 text-xs font-bold text-white">
+                Sostenibilidad
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="text-xs font-semibold uppercase tracking-wider text-gray-500">Territorio</div>
+              <h3 class="mt-2 font-serif text-xl font-bold leading-snug text-bosque">
+                Conservación amazónica y desarrollo local
+              </h3>
+              <p class="mt-3 line-clamp-2 text-sm leading-6 text-gray-600">
+                Cómo fortalecer economías locales sin comprometer los ecosistemas estratégicos de la Amazonía peruana.
+              </p>
+              <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-4 text-xs text-gray-500">
+                <span>Renato Chávez</span>
+                <span>28 jul. 2026 · 8 min</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 5 -->
+          <article class="article-card overflow-hidden rounded-2xl border border-gray-200 bg-white">
+            <div class="relative h-56 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=80"
+                   alt="Personas reunidas en una mesa de diálogo"
+                   class="h-full w-full object-cover">
+              <span class="absolute left-4 top-4 rounded-full bg-marino px-3 py-1 text-xs font-bold text-white">
+                Sociedad
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="text-xs font-semibold uppercase tracking-wider text-gray-500">Opinión</div>
+              <h3 class="mt-2 font-serif text-xl font-bold leading-snug text-bosque">
+                El valor del diálogo para reconstruir confianza pública
+              </h3>
+              <p class="mt-3 line-clamp-2 text-sm leading-6 text-gray-600">
+                Participación, escucha activa y evidencia como herramientas para cerrar brechas entre ciudadanía e instituciones.
+              </p>
+              <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-4 text-xs text-gray-500">
+                <span>Ana Torres</span>
+                <span>21 jul. 2026 · 5 min</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 6 -->
+          <article class="article-card overflow-hidden rounded-2xl border border-gray-200 bg-white">
+            <div class="relative h-56 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80"
+                   alt="Montañas de gran altitud en un paisaje andino"
+                   class="h-full w-full object-cover">
+              <span class="absolute left-4 top-4 rounded-full bg-terracota px-3 py-1 text-xs font-bold text-white">
+                Economía
+              </span>
+            </div>
+            <div class="p-6">
+              <div class="text-xs font-semibold uppercase tracking-wider text-gray-500">Economía territorial</div>
+              <h3 class="mt-2 font-serif text-xl font-bold leading-snug text-bosque">
+                Infraestructura y conectividad para cerrar brechas regionales
+              </h3>
+              <p class="mt-3 line-clamp-2 text-sm leading-6 text-gray-600">
+                El papel de la infraestructura física y digital para ampliar oportunidades en regiones del Perú.
+              </p>
+              <div class="mt-5 flex items-center justify-between border-t border-gray-100 pt-4 text-xs text-gray-500">
+                <span>Diego Paredes</span>
+                <span>15 jul. 2026 · 10 min</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =======================================================
+         PODCASTS
+    ======================================================== -->
+    <section id="podcasts" class="bg-[#eef3ef] py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+        <div class="grid gap-12 lg:grid-cols-[.8fr_1.2fr] lg:items-start">
+
+          <div>
+            <span class="text-sm font-bold uppercase tracking-[.18em] text-terracota">
+              Diálogo en audio
+            </span>
+
+            <h2 class="mt-3 font-serif text-4xl font-bold leading-tight text-bosque sm:text-5xl">
+              Podcast & Audio
+            </h2>
+
+            <p class="mt-5 max-w-lg leading-7 text-gray-600">
+              Conversaciones con investigadores, especialistas y protagonistas de los debates
+              que están transformando el Perú.
+            </p>
+
+            <!-- Player -->
+            <div class="mt-8 rounded-2xl bg-bosque p-6 text-white shadow-editorial">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-widest text-green-200">
+                    Reproduciendo
+                  </span>
+                  <h3 id="nowPlayingTitle" class="mt-2 font-serif text-2xl font-bold">
+                    Selecciona un episodio
+                  </h3>
+                  <p id="nowPlayingDescription" class="mt-2 text-sm leading-6 text-green-50/80">
+                    El reproductor es una simulación interactiva para demostración del portal.
+                  </p>
+                </div>
+
+                <span id="playerStatus"
+                      class="hidden rounded-full bg-white/10 px-3 py-1 text-xs font-semibold">
+                  00:00
+                </span>
+              </div>
+
+              <div class="mt-6">
+                <div class="h-1.5 overflow-hidden rounded-full bg-white/20">
+                  <div id="progressBar" class="h-full w-0 rounded-full bg-terracota transition-all duration-300"></div>
+                </div>
+
+                <div class="mt-3 flex justify-between text-xs text-green-100/70">
+                  <span id="currentTime">00:00</span>
+                  <span id="totalTime">00:00</span>
+                </div>
+              </div>
+
+              <div class="mt-5 flex items-center gap-3">
+                <button id="mainPlayButton"
+                        type="button"
+                        disabled
+                        class="focus-ring flex h-12 w-12 items-center justify-center rounded-full bg-terracota text-white disabled:cursor-not-allowed disabled:opacity-40"
+                        aria-label="Reproducir episodio">
+                  <svg id="mainPlayIcon" aria-hidden="true" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"></path>
+                  </svg>
+                </button>
+
+                <span id="playerLabel" class="text-sm font-semibold">
+                  Selecciona un episodio
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-4" aria-label="Lista de episodios">
+
+            <article class="podcast-item flex gap-4 rounded-2xl border border-gray-200 bg-white p-5 transition"
+                     data-title="¿Puede la política recuperar la confianza ciudadana?"
+                     data-description="Una conversación sobre representación, instituciones y los desafíos para reconstruir legitimidad democrática."
+                     data-duration="32:18">
+              <div class="episode-number flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gray-100 font-serif text-lg font-bold text-bosque">
+                01
+              </div>
+
+              <div class="min-w-0 flex-1">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <span class="text-xs font-bold uppercase tracking-widest text-terracota">Episodio 01</span>
+                  <span class="text-xs text-gray-500">32:18</span>
+                </div>
+                <h3 class="mt-1 font-serif text-xl font-bold text-bosque">
+                  ¿Puede la política recuperar la confianza ciudadana?
+                </h3>
+                <p class="mt-2 text-sm leading-6 text-gray-600">
+                  Representación, instituciones y desafíos para reconstruir legitimidad democrática.
+                </p>
+                <button type="button"
+                        class="play-episode focus-ring mt-4 inline-flex items-center gap-2 rounded-full bg-bosque px-4 py-2 text-xs font-bold text-white hover:bg-marino"
+                        aria-label="Reproducir episodio 1">
+                  <svg class="play-icon h-4 w-4" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"></path>
+                  </svg>
+                  Reproducir
+                </button>
+              </div>
+            </article>
+
+            <article class="podcast-item flex gap-4 rounded-2xl border border-gray-200 bg-white p-5 transition"
+                     data-title="Agua para todos: el desafío de las ciudades costeras"
+                     data-description="Expertos analizan alternativas para garantizar seguridad hídrica y resiliencia frente al cambio climático."
+                     data-duration="27:42">
+              <div class="episode-number flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gray-100 font-serif text-lg font-bold text-bosque">
+                02
+              </div>
+
+              <div class="min-w-0 flex-1">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <span class="text-xs font-bold uppercase tracking-widest text-terracota">Episodio 02</span>
+                  <span class="text-xs text-gray-500">27:42</span>
+                </div>
+                <h3 class="mt-1 font-serif text-xl font-bold text-bosque">
+                  Agua para todos: el desafío de las ciudades costeras
+                </h3>
+                <p class="mt-2 text-sm leading-6 text-gray-600">
+                  Seguridad hídrica y resiliencia frente al cambio climático.
+                </p>
+                <button type="button"
+                        class="play-episode focus-ring mt-4 inline-flex items-center gap-2 rounded-full bg-bosque px-4 py-2 text-xs font-bold text-white hover:bg-marino"
+                        aria-label="Reproducir episodio 2">
+                  <svg class="play-icon h-4 w-4" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"></path>
+                  </svg>
+                  Reproducir
+                </button>
+              </div>
+            </article>
+
+            <article class="podcast-item flex gap-4 rounded-2xl border border-gray-200 bg-white p-5 transition"
+                     data-title="Amazonía: conservación y oportunidades económicas"
+                     data-description="Cómo generar valor sostenible desde los territorios amazónicos y fortalecer las economías locales."
+                     data-duration="41:06">
+              <div class="episode-number flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gray-100 font-serif text-lg font-bold text-bosque">
+                03
+              </div>
+
+              <div class="min-w-0 flex-1">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                  <span class="text-xs font-bold uppercase tracking-widest text-terracota">Episodio 03</span>
+                  <span class="text-xs text-gray-500">41:06</span>
+                </div>
+                <h3 class="mt-1 font-serif text-xl font-bold text-bosque">
+                  Amazonía: conservación y oportunidades económicas
+                </h3>
+                <p class="mt-2 text-sm leading-6 text-gray-600">
+                  Valor sostenible, territorio y fortalecimiento de economías locales.
+                </p>
+                <button type="button"
+                        class="play-episode focus-ring mt-4 inline-flex items-center gap-2 rounded-full bg-bosque px-4 py-2 text-xs font-bold text-white hover:bg-marino"
+                        aria-label="Reproducir episodio 3">
+                  <svg class="play-icon h-4 w-4" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"></path>
+                  </svg>
+                  Reproducir
+                </button>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =======================================================
+         MULTIMEDIA
+    ======================================================== -->
+    <section id="multimedia" class="bg-hueso py-20 sm:py-24">
+      <div class="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
+
+        <div class="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <span class="text-sm font-bold uppercase tracking-[.18em] text-terracota">
+              Historias en imágenes
+            </span>
+            <h2 class="mt-3 font-serif text-4xl font-bold text-bosque sm:text-5xl">
+              Reportajes y Multimedia
+            </h2>
+          </div>
+
+          <p class="max-w-xl text-sm leading-6 text-gray-600">
+            Reportajes visuales y piezas multimedia para acercarnos a los territorios,
+            comunidades y debates que forman el Perú.
+          </p>
+        </div>
+
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
+          <article class="media-card group relative h-[420px] overflow-hidden rounded-2xl">
+            <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=85"
+                 alt="Paisaje verde de la Amazonía"
+                 class="h-full w-full object-cover">
+            <div class="media-overlay absolute inset-0"></div>
+            <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+              <span class="text-xs font-bold uppercase tracking-widest text-orange-200">Fotografía</span>
+              <h3 class="mt-2 font-serif text-2xl font-bold">Guardianes de la Amazonía</h3>
+              <p class="mt-2 text-sm text-white/80">Territorio, conservación y comunidades.</p>
+            </div>
+          </article>
+
+          <article class="media-card group relative h-[420px] overflow-hidden rounded-2xl lg:mt-12">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85"
+                 alt="Cordillera de los Andes bajo un cielo despejado"
+                 class="h-full w-full object-cover">
+            <div class="media-overlay absolute inset-0"></div>
+            <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+              <span class="text-xs font-bold uppercase tracking-widest text-orange-200">Reportaje</span>
+              <h3 class="mt-2 font-serif text-2xl font-bold">Vivir en altura</h3>
+              <p class="mt-2 text-sm text-white/80">Los desafíos de los Andes frente al cambio climático.</p>
+            </div>
+          </article>
+
+          <article class="media-card group relative h-[420px] overflow-hidden rounded-2xl">
+            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=85"
+                 alt="Paisaje rural con montañas y vegetación"
+                 class="h-full w-full object-cover">
+            <div class="media-overlay absolute inset-0"></div>
+            <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+              <span class="text-xs font-bold uppercase tracking-widest text-orange-200">Multimedia</span>
+              <h3 class="mt-2 font-serif text-2xl font-bold">Territorios que resisten</h3>
+              <p class="mt-2 text-sm text-white/80">Adaptación, agricultura y resiliencia rural.</p>
+            </div>
+          </article>
+
+          <article class="media-card group relative h-[420px] overflow-hidden rounded-2xl lg:mt-12">
+            <div class="absolute inset-0 bg-marino"></div>
+            <div class="relative flex h-full flex-col justify-between p-6 text-white">
+              <div>
+                <span class="inline-flex rounded-full bg-terracota px-3 py-1 text-xs font-bold uppercase tracking-wider">
+                  Video
+                </span>
+                <div class="mt-10 flex h-16 w-16 items-center justify-center rounded-full border border-white/50 bg-white/10 backdrop-blur-sm">
+                  <svg aria-hidden="true" class="ml-1 h-7 w-7 fill-white" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"></path>
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <h3 class="font-serif text-2xl font-bold">Conversaciones sobre el futuro</h3>
+                <p class="mt-2 text-sm text-white/80">
+                  Serie audiovisual sobre gobernanza y sostenibilidad.
+                </p>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =======================================================
+         NEWSLETTER / CONTACTO
+    ======================================================== -->
+    <section id="contacto" class="bg-marino py-16 sm:py-20">
+      <div class="mx-auto grid max-w-7xl gap-8 px-5 sm:px-6 lg:grid-cols-[1fr_auto] lg:items-center lg:px-8">
+
+        <div class="text-white">
+          <span class="text-sm font-bold uppercase tracking-[.18em] text-orange-200">
+            Mantente informado
+          </span>
+          <h2 class="mt-3 font-serif text-3xl font-bold sm:text-4xl">
+            Ideas que merecen ser parte de la conversación.
+          </h2>
+          <p class="mt-3 max-w-2xl text-white/75">
+            Recibe nuevas investigaciones, análisis y episodios directamente en tu correo.
+          </p>
+        </div>
+
+        <form id="newsletterForm" class="w-full max-w-xl">
+          <label for="newsletterEmail" class="sr-only">Correo electrónico</label>
+          <div class="flex flex-col gap-3 sm:flex-row">
+            <input id="newsletterEmail"
+                   type="email"
+                   required
+                   placeholder="tu-correo@ejemplo.com"
+                   class="focus-ring min-w-0 flex-1 rounded-lg border-2 border-white/20 bg-white px-4 py-3.5 text-sm text-gray-900 placeholder:text-gray-500">
+            <button type="submit"
+                    class="focus-ring rounded-lg bg-terracota px-6 py-3.5 text-sm font-bold text-white hover:bg-[#a94b2e]">
+              Suscribirme
+            </button>
+          </div>
+          <p id="newsletterMessage" class="mt-3 hidden text-sm text-green-100"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+  <footer class="bg-[#102719] text-white">
+
+    <div class="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
+
+      <!-- Mission -->
+      <div>
+        <a href="#inicio"
+           class="focus-ring inline-flex items-center gap-3 rounded-md"
+           aria-label="Diálogo y Desarrollo - Ir al inicio">
+          <span class="flex h-11 w-11 items-center justify-center rounded-full bg-white text-bosque">
+            <svg aria-hidden="true" viewBox="0 0 40 40" class="h-7 w-7 fill-none stroke-current" stroke-width="2">
+              <path d="M20 31V9"/>
+              <path d="M20 14c-5-5-10-4-13-1 3 5 8 7 13 6"/>
+              <path d="M20 19c5-5 10-4 13-1-3 5-8 7-13 6"/>
+              <path d="M20 25c-4-4-8-3-11 0 3 4 7 5 11 4"/>
+              <path d="M20 25c4-4 8-3 11 0-3 4-7 5-11 4"/>
+            </svg>
+          </span>
+          <span class="font-serif text-lg font-bold">Diálogo y Desarrollo</span>
+        </a>
+
+        <p class="mt-5 max-w-xs text-sm leading-7 text-white/65">
+          Promovemos conocimiento independiente y espacios de diálogo para contribuir
+          a un Perú más democrático, sostenible e informado.
+        </p>
+      </div>
+
+      <!-- Quick links -->
+      <div>
+        <h2 class="text-sm font-bold uppercase tracking-widest text-white">Navegación</h2>
+        <ul class="mt-5 space-y-3 text-sm text-white/65">
+          <li><a class="focus-ring rounded hover:text-white" href="#inicio">Inicio</a></li>
+          <li><a class="focus-ring rounded hover:text-white" href="#publicaciones">Actualidad</a></li>
+          <li><a class="focus-ring rounded hover:text-white" href="#podcasts">Podcasts</a></li>
+          <li><a class="focus-ring rounded hover:text-white" href="#multimedia">Multimedia</a></li>
+          <li><a class="focus-ring rounded hover:text-white" href="#nosotros">Nosotros</a></li>
+          <li><a class="focus-ring rounded hover:text-white" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Research categories -->
+      <div>
+        <h2 class="text-sm font-bold uppercase tracking-widest text-white">Investigación</h2>
+        <ul class="mt-5 space-y-3 text-sm text-white/65">
+          <li><a href="#publicaciones" class="focus-ring rounded hover:text-white">Gobernanza y democracia</a></li>
+          <li><a href="#publicaciones" class="focus-ring rounded hover:text-white">Medio ambiente</a></li>
+          <li><a href="#publicaciones" class="focus-ring rounded hover:text-white">Economía</a></li>
+          <li><a href="#publicaciones" class="focus-ring rounded hover:text-white">Desarrollo territorial</a></li>
+          <li><a href="#publicaciones" class="focus-ring rounded hover:text-white">Políticas públicas</a></li>
+          <li><a href="#publicaciones" class="focus-ring rounded hover:text-white">Sociedad</a></li>
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div>
+        <h2 class="text-sm font-bold uppercase tracking-widest text-white">Síguenos</h2>
+
+        <div class="mt-5 flex gap-3">
+          <a href="#" aria-label="Facebook" class="focus-ring flex h-10 w-10 items-center justify-center rounded-full bg-white/10 hover:bg-terracota">
+            <svg aria-hidden="true" class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+              <path d="M14 8h3V4h-3c-3.3 0-5 1.9-5 5v3H6v4h3v4h4v-4h3l1-4h-4V9c0-.7.3-1 1-1z"/>
+            </svg>
+          </a>
+
+          <a href="#" aria-label="Instagram" class="focus-ring flex h-10 w-10 items-center justify-center rounded-full bg-white/10 hover:bg-terracota">
+            <svg aria-hidden="true" class="h-5 w-5 fill-none stroke-current" viewBox="0 0 24 24" stroke-width="1.8">
+              <rect x="3" y="3" width="18" height="18" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+
+          <a href="#" aria-label="YouTube" class="focus-ring flex h-10 w-10 items-center justify-center rounded-full bg-white/10 hover:bg-terracota">
+            <svg aria-hidden="true" class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+              <path d="M23 12s0-3.5-.4-5.1c-.2-.9-.9-1.6-1.8-1.8C19.2 4.7 12 4.7 12 4.7s-7.2 0-8.8.4c-.9.2-1.6.9-1.8 1.8C1 8.5 1 12 1 12s0 3.5.4 5.1c.2.9.9 1.6 1.8 1.8 1.6.4 8.8.4 8.8.4s7.2 0 8.8-.4c.9-.2 1.6-.9 1.8-1.8C23 15.5 23 12 23 12ZM10 15.5v-7l6 3.5-6 3.5Z"/>
+            </svg>
+          </a>
+
+          <a href="#" aria-label="LinkedIn" class="focus-ring flex h-10 w-10 items-center justify-center rounded-full bg-white/10 hover:bg-terracota">
+            <svg aria-hidden="true" class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+              <path d="M5.2 8H1.5v12h3.7V8ZM3.3 2C2.1 2 1.3 2.8 1.3 3.9s.8 1.9 2 1.9 2-.8 2-1.9S4.5 2 3.3 2ZM22.5 13.2c0-3.6-1.9-5.6-4.7-5.6-2.2 0-3.2 1.2-3.8 2v-1.7h-3.7v12H14v-6c0-1.6.3-3.1 2.3-3.1 2 0 2 1.8 2 3.2v5.9h4.2v-6.7Z"/>
+            </svg>
+          </a>
+        </div>
+
+        <p class="mt-6 text-xs leading-5 text-white/45">
+          Investigación independiente para una conversación pública de calidad.
+        </p>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10">
+      <div class="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-6 text-xs text-white/50 sm:px-6 md:flex-row md:items-center md:justify-between lg:px-8">
+        <p>© 2026 Diálogo y Desarrollo. Todos los derechos reservados.</p>
+        <div class="flex gap-5">
+          <a href="#" class="focus-ring rounded hover:text-white">Privacidad</a>
+          <a href="#" class="focus-ring rounded hover:text-white">Términos de uso</a>
+          <a href="#" class="focus-ring rounded hover:text-white">Accesibilidad</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+  <!-- =========================================================
+       JAVASCRIPT VANILLA
+  ========================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      /* -------------------------------------------------------
+         MOBILE MENU
+      ------------------------------------------------------- */
+      const menuButton = document.getElementById('menuButton');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      menuButton.addEventListener('click', () => {
+        const isOpen = !mobileMenu.classList.contains('hidden');
+
+        mobileMenu.classList.toggle('hidden');
+        menuButton.classList.toggle('menu-open', !isOpen);
+        menuButton.setAttribute('aria-expanded', String(!isOpen));
+        menuButton.setAttribute(
+          'aria-label',
+          !isOpen ? 'Cerrar menú de navegación' : 'Abrir menú de navegación'
+        );
+      });
+
+      document.querySelectorAll('#mobileMenu a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuButton.classList.remove('menu-open');
+          menuButton.setAttribute('aria-expanded', 'false');
+          menuButton.setAttribute('aria-label', 'Abrir menú de navegación');
+        });
+      });
+
+
+      /* -------------------------------------------------------
+         SEARCH
+      ------------------------------------------------------- */
+      const searchButton = document.getElementById('searchButton');
+      const searchPanel = document.getElementById('searchPanel');
+      const searchForm = document.getElementById('searchForm');
+      const searchInput = document.getElementById('searchInput');
+      const searchMessage = document.getElementById('searchMessage');
+
+      searchButton.addEventListener('click', () => {
+        const isHidden = searchPanel.classList.contains('hidden');
+
+        searchPanel.classList.toggle('hidden');
+        searchButton.setAttribute('aria-expanded', String(isHidden));
+
+        if (isHidden) {
+          setTimeout(() => searchInput.focus(), 50);
+        }
+      });
+
+      searchForm.addEventListener('submit', event => {
+        event.preventDefault();
+
+        const query = searchInput.value.trim().toLowerCase();
+
+        if (!query) {
+          searchMessage.textContent = 'Escribe un término para realizar la búsqueda.';
+          searchMessage.classList.remove('hidden');
+          searchInput.focus();
+          return;
+        }
+
+        const articles = [...document.querySelectorAll('#articlesGrid article')];
+
+        const matches = articles.filter(article =>
+          article.textContent.toLowerCase().includes(query)
+        );
+
+        articles.forEach(article => {
+          article.classList.toggle(
+            'hidden',
+            !matches.includes(article)
+          );
+        });
+
+        searchMessage.textContent = matches.length
+          ? `Se encontraron ${matches.length} publicación${matches.length === 1 ? '' : 'es'} relacionadas con “${searchInput.value}”.`
+          : `No encontramos publicaciones relacionadas con “${searchInput.value}”.`;
+
+        searchMessage.classList.remove('hidden');
+
+        document.getElementById('publicaciones').scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+
+
+      /* -------------------------------------------------------
+         SHOW ALL ARTICLES
+      ------------------------------------------------------- */
+      const showAllButton = document.getElementById('showAllButton');
+
+      showAllButton.addEventListener('click', () => {
+        document.querySelectorAll('#articlesGrid article').forEach(article => {
+          article.classList.remove('hidden');
+        });
+
+        searchInput.value = '';
+        searchMessage.classList.add('hidden');
+
+        showAllButton.textContent = 'Mostrando todas';
+        setTimeout(() => {
+          showAllButton.textContent = 'Ver todas';
+        }, 1800);
+      });
+
+
+      /* -------------------------------------------------------
+         PODCAST PLAYER - DOM SIMULATION
+      ------------------------------------------------------- */
+      const podcastItems = document.querySelectorAll('.podcast-item');
+      const episodeButtons = document.querySelectorAll('.play-episode');
+      const mainPlayButton = document.getElementById('mainPlayButton');
+      const mainPlayIcon = document.getElementById('mainPlayIcon');
+      const nowPlayingTitle = document.getElementById('nowPlayingTitle');
+      const nowPlayingDescription = document.getElementById('nowPlayingDescription');
+      const progressBar = document.getElementById('progressBar');
+      const currentTimeElement = document.getElementById('currentTime');
+      const totalTimeElement = document.getElementById('totalTime');
+      const playerStatus = document.getElementById('playerStatus');
+      const playerLabel = document.getElementById('playerLabel');
+
+      let activeEpisode = null;
+      let isPlaying = false;
+      let elapsedSeconds = 0;
+      let durationSeconds = 0;
+      let playerInterval = null;
+
+      function timeToSeconds(time) {
+        const parts = time.split(':').map(Number);
+
+        if (parts.length === 2) {
+          return parts[0] * 60 + parts[1];
+        }
+
+        return 0;
+      }
+
+      function secondsToTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+
+        return `${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+      }
+
+      function updateMainIcon() {
+        mainPlayIcon.innerHTML = isPlaying
+          ? '<rect x="7" y="5" width="4" height="14" rx="1"></rect><rect x="13" y="5" width="4" height="14" rx="1"></rect>'
+          : '<path d="M8 5v14l11-7z"></path>';
+
+        mainPlayButton.setAttribute(
+          'aria-label',
+          isPlaying ? 'Pausar episodio' : 'Reproducir episodio'
+        );
+
+        playerLabel.textContent = isPlaying
+          ? 'Reproduciendo episodio'
+          : 'Episodio pausado';
+      }
+
+      function stopTimer() {
+        if (playerInterval) {
+          clearInterval(playerInterval);
+          playerInterval = null;
+        }
+      }
+
+      function startTimer() {
+        stopTimer();
+
+        playerInterval = setInterval(() => {
+          if (!isPlaying) return;
+
+          elapsedSeconds += 1;
+
+          if (elapsedSeconds >= durationSeconds) {
+            elapsedSeconds = durationSeconds;
+            isPlaying = false;
+            stopTimer();
+            updateMainIcon();
+            playerLabel.textContent = 'Episodio finalizado';
+          }
+
+          const progress = durationSeconds
+            ? (elapsedSeconds / durationSeconds) * 100
+            : 0;
+
+          progressBar.style.width = `${progress}%`;
+          currentTimeElement.textContent = secondsToTime(elapsedSeconds);
+          playerStatus.textContent = secondsToTime(elapsedSeconds);
+        }, 1000);
+      }
+
+      function selectEpisode(item) {
+        podcastItems.forEach(element => element.classList.remove('active'));
+        item.classList.add('active');
+
+        activeEpisode = item;
+        elapsedSeconds = 0;
+        durationSeconds = timeToSeconds(item.dataset.duration);
+        isPlaying = true;
+
+        nowPlayingTitle.textContent = item.dataset.title;
+        nowPlayingDescription.textContent = item.dataset.description;
+        totalTimeElement.textContent = item.dataset.duration;
+        currentTimeElement.textContent = '00:00';
+        playerStatus.textContent = '00:00';
+        playerStatus.classList.remove('hidden');
+        progressBar.style.width = '0%';
+
+        mainPlayButton.disabled = false;
+
+        updateMainIcon();
+        startTimer();
+
+        document.getElementById('podcasts').scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+
+      episodeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const item = button.closest('.podcast-item');
+
+          if (activeEpisode === item) {
+            isPlaying = !isPlaying;
+            updateMainIcon();
+
+            if (isPlaying) {
+              startTimer();
+            } else {
+              stopTimer();
+            }
+
+            return;
+          }
+
+          selectEpisode(item);
+        });
+      });
+
+      mainPlayButton.addEventListener('click', () => {
+        if (!activeEpisode) return;
+
+        isPlaying = !isPlaying;
+        updateMainIcon();
+
+        if (isPlaying) {
+          startTimer();
+        } else {
+          stopTimer();
+        }
+      });
+
+
+      /* -------------------------------------------------------
+         NEWSLETTER
+      ------------------------------------------------------- */
+      const newsletterForm = document.getElementById('newsletterForm');
+      const newsletterMessage = document.getElementById('newsletterMessage');
+      const newsletterEmail = document.getElementById('newsletterEmail');
+
+      newsletterForm.addEventListener('submit', event => {
+        event.preventDefault();
+
+        const email = newsletterEmail.value.trim();
+
+        if (!email) return;
+
+        newsletterMessage.textContent =
+          `Gracias. Hemos registrado ${email} para el boletín de demostración.`;
+
+        newsletterMessage.classList.remove('hidden');
+        newsletterForm.reset();
+      });
+
+
+      /* -------------------------------------------------------
+         ACTIVE NAVIGATION - Intersection Observer
+      ------------------------------------------------------- */
+      const sections = document.querySelectorAll('main section[id]');
+      const navigationLinks = document.querySelectorAll('header nav a');
+
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+
+            navigationLinks.forEach(link => {
+              const isCurrent = link.getAttribute('href') === `#${entry.target.id}`;
+
+              link.classList.toggle('text-bosque', isCurrent);
+              link.classList.toggle('text-gray-700', !isCurrent);
+            });
+          });
+        },
+        {
+          rootMargin: '-35% 0px -55% 0px'
+        }
+      );
+
+      sections.forEach(section => observer.observe(section));
+
+    });
+  </script>
+
+</body>
+</html>
+
+<!--
+===============================================================
+DECISIONES DE DISEÑO
+===============================================================
+
+1. Identidad visual:
+   - Verde Bosque (#1a472a) como color institucional dominante.
+   - Azul Marino (#0f3460) para contenidos de confianza y profundidad.
+   - Terracota (#c75b39) como color de acción y acento editorial.
+   - Fondo Blanco Hueso (#faf9f6) para reducir la sensación de "sitio corporativo"
+     y reforzar una estética editorial/académica.
+
+2. Tipografía:
+   - Playfair Display para titulares, cifras y elementos editoriales.
+   - Inter para navegación, metadatos, cuerpo y elementos funcionales.
+
+3. UX/UI:
+   - Diseño mobile-first con breakpoints de Tailwind.
+   - Header sticky con navegación desktop y menú hamburguesa móvil.
+   - Hero de alto impacto con CTA principal y CTA secundario.
+   - Tarjetas editoriales con jerarquía clara de categoría, título, extracto,
+     autor, fecha y tiempo de lectura.
+
+4. Interactividad:
+   - Menú móvil animado.
+   - Buscador funcional sobre las publicaciones existentes.
+   - Botón "Ver todas".
+   - Reproductor de podcast simulado mediante JavaScript Vanilla y estados DOM.
+   - Formulario de newsletter con confirmación visual.
+   - Navegación con estado activo mediante IntersectionObserver.
+
+5. Accesibilidad:
+   - lang="es".
+   - Etiquetas semánticas HTML5.
+   - aria-label, aria-expanded, aria-controls y textos para lectores de pantalla.
+   - alt descriptivo en imágenes.
+   - Estados :focus-visible altamente visibles.
+   - Contraste reforzado en botones, navegación y fondos.
+   - Soporte para prefers-reduced-motion.
+
+6. SEO:
+   - title y meta description.
+   - Open Graph básico.
+   - Jerarquía de encabezados.
+   - HTML semántico.
+   - Texto descriptivo orientado a investigación, gobernanza y sostenibilidad.
+
+7. Arquitectura:
+   - Un único index.html.
+   - Tailwind CSS exclusivamente vía CDN.
+   - JavaScript Vanilla sin React, Vue, jQuery, Swiper ni otras librerías.
+   - Las imágenes de demostración utilizan URLs de Unsplash y deben reemplazarse
+     posteriormente por fotografías institucionales con licencia adecuada.
+
+8. Nota funcional:
+   - El reproductor de podcast es deliberadamente una simulación de UI/estado.
+     Para producción se debe conectar a archivos de audio o a un servicio/CDN
+     de podcast real.
+===============================================================
+-->

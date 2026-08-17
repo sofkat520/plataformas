@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Sofia Katherine Rojas Taipe</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome para Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        softPink: '#ff85b3',
+                        cutePurple: '#7c3aed',
+                        darkBg: '#0f172a',
+                        cardDark: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-pink-50 text-slate-800 dark:bg-darkBg dark:text-slate-100 transition-colors duration-300 font-sans">
+
+    <!-- 1. NAVBAR RESPONSIVE -->
+    <nav class="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-pink-200 dark:border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold text-cutePurple dark:text-softPink">Sofia Rojas ✨</a>
+            
+            <!-- Menú Desktop -->
+            <div class="hidden md:flex items-center space-x-6 font-semibold">
+                <a href="#inicio" class="hover:text-softPink transition">Inicio</a>
+                <a href="#sobre-mi" class="hover:text-softPink transition">Sobre Mí</a>
+                <a href="#habilidades" class="hover:text-softPink transition">Habilidades</a>
+                <a href="#proyectos" class="hover:text-softPink transition">Proyectos</a>
+                <a href="#contacto" class="hover:text-softPink transition">Contacto</a>
+                <button id="theme-toggle" class="px-3 py-1 text-sm bg-pink-100 dark:bg-slate-800 rounded-full border border-pink-300 dark:border-slate-700 hover:scale-105 transition">☀️ Modo Claro</button>
+            </div>
+
+            <!-- Botón Móvil Hamburguesa -->
+            <div class="md:hidden flex items-center gap-2">
+                <button id="theme-toggle-mobile" class="p-2 text-sm bg-pink-100 dark:bg-slate-800 rounded-full">☀️</button>
+                <button id="mobile-menu-btn" class="text-2xl text-cutePurple dark:text-softPink focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menú Desplegable Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 px-4 pt-2 pb-4 border-t border-pink-100 dark:border-slate-800 flex flex-col gap-3 font-semibold">
+            <a href="#inicio" class="mobile-link">Inicio</a>
+            <a href="#sobre-mi" class="mobile-link">Sobre Mí</a>
+            <a href="#habilidades" class="mobile-link">Habilidades</a>
+            <a href="#proyectos" class="mobile-link">Proyectos</a>
+            <a href="#contacto" class="mobile-link">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- 2. HERO SECTION -->
+    <section id="inicio" class="max-w-6xl mx-auto px-4 py-20 text-center flex flex-col items-center">
+        <div class="w-32 h-32 mb-6 rounded-full p-1 bg-gradient-to-r from-softPink to-cutePurple shadow-lg">
+            <img src="images/p01.jpg" alt="Sofia Rojas" class="w-full h-full object-cover rounded-full">
+        </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Sofia Katherine Rojas Taipe</h1>
+        <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl font-semibold mb-8">
+            Estudiante de Ingeniería de Sistemas — Octavo Semestre | Universidad Andina del Cusco 🎓🌸
+        </p>
+        <a href="#proyectos" class="bg-cutePurple hover:bg-purple-700 text-white font-bold px-6 py-3 rounded-full shadow-lg hover:scale-105 transition">Ver Mis Proyectos 💖</a>
+    </section>
+
+    <!-- 3. SECCIÓN SOBRE MÍ -->
+    <section id="sobre-mi" class="max-w-4xl mx-auto px-4 py-12">
+        <div class="bg-white dark:bg-cardDark rounded-2xl p-8 shadow-xl border border-pink-100 dark:border-slate-800">
+            <h2 class="text-3xl font-extrabold text-cutePurple dark:text-softPink mb-4">Sobre Mí 👩‍💻</h2>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                ¡Hola! Soy <strong>Sofia Katherine Rojas Taipe</strong>, estudiante del <strong>octavo semestre</strong> de Ingeniería de Sistemas. A lo largo de mi formación académica he desarrollado un perfil integral, combinando habilidades en desarrollo web frontend (HTML5, CSS3, JavaScript), programación orientada a objetos (Java, C#) y gestión de bases de datos relacionales (MySQL, SQL Server, PostgreSQL).
+            </p>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                Me apasiona la tecnología y la arquitectura de software, enfocándome en construir interfaces modernas, responsive y funcionales. Cuento con bases sólidas en redes informáticas (Cisco Packet Tracer) y metodologías ágiles de trabajo como Scrum con control de versiones en Git y GitHub.
+            </p>
+        </div>
+    </section>
+
+    <!-- 4. HABILIDADES TÉCNICAS -->
+    <section id="habilidades" class="max-w-6xl mx-auto px-4 py-12">
+        <h2 class="text-3xl font-extrabold text-center text-cutePurple dark:text-softPink mb-8">Habilidades Técnicas ✨</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-white dark:bg-cardDark p-4 rounded-xl border border-pink-100 dark:border-slate-800 text-center shadow-md">
+                <i class="fab fa-html5 text-3xl text-orange-500 mb-2"></i>
+                <h3 class="font-bold">HTML5 & CSS3</h3>
+            </div>
+            <div class="bg-white dark:bg-cardDark p-4 rounded-xl border border-pink-100 dark:border-slate-800 text-center shadow-md">
+                <i class="fab fa-js text-3xl text-yellow-400 mb-2"></i>
+                <h3 class="font-bold">JavaScript</h3>
+            </div>
+            <div class="bg-white dark:bg-cardDark p-4 rounded-xl border border-pink-100 dark:border-slate-800 text-center shadow-md">
+                <i class="fab fa-git-alt text-3xl text-red-500 mb-2"></i>
+                <h3 class="font-bold">Git & GitHub</h3>
+            </div>
+            <div class="bg-white dark:bg-cardDark p-4 rounded-xl border border-pink-100 dark:border-slate-800 text-center shadow-md">
+                <i class="fas fa-database text-3xl text-blue-500 mb-2"></i>
+                <h3 class="font-bold">Bases de Datos</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. PROYECTOS DESTACADOS (JS DINÁMICO) -->
+    <section id="proyectos" class="max-w-6xl mx-auto px-4 py-12">
+        <h2 class="text-3xl font-extrabold text-cutePurple dark:text-softPink mb-2">Proyectos Destacados 💻💖</h2>
+        <p class="text-slate-600 dark:text-slate-400 mb-6 font-semibold">Proyectos académicos y personales desarrollados durante la carrera:</p>
+        
+        <!-- Botones de Ordenamiento -->
+        <div class="flex gap-3 mb-8">
+            <button id="sort-newest" class="px-4 py-2 bg-cutePurple text-white font-bold rounded-lg text-sm shadow hover:opacity-90">✨ Más nuevos primero</button>
+            <button id="sort-oldest" class="px-4 py-2 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-bold rounded-lg text-sm shadow hover:opacity-90">📜 Más antiguos primero</button>
+        </div>
+
+        <!-- Contenedor donde JS inyecta las tarjetas -->
+        <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+    </section>
+
+    <!-- 6. CONTACTO Y FOOTER -->
+    <footer id="contacto" class="bg-white dark:bg-slate-900 border-t border-pink-200 dark:border-slate-800 mt-20 py-12">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h2 class="text-2xl font-extrabold text-cutePurple dark:text-softPink mb-4">Contacto 📲</h2>
+                <p class="text-slate-600 dark:text-slate-300 mb-4 font-semibold">Puedes comunicarte conmigo directamente:</p>
+                <ul class="space-y-2 font-semibold">
+                    <li><i class="fas fa-phone text-softPink mr-2"></i> 927812955</li>
+                    <li><i class="fas fa-envelope text-softPink mr-2"></i> <a href="mailto:023200582H@uandina.edu.pe" class="hover:underline">023200582H@uandina.edu.pe</a></li>
+                    <li><i class="fab fa-github text-softPink mr-2"></i> <a href="https://github.com/sofkat520" target="_blank" class="hover:underline">github.com/sofkat520</a></li>
+                </ul>
+            </div>
+            <div>
+                <form action="#" method="POST" class="space-y-3">
+                    <input type="text" placeholder="Tu Nombre" class="w-full p-3 rounded-lg bg-pink-50 dark:bg-slate-800 border border-pink-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-softPink">
+                    <input type="email" placeholder="Tu Correo" class="w-full p-3 rounded-lg bg-pink-50 dark:bg-slate-800 border border-pink-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-softPink">
+                    <textarea rows="3" placeholder="Tu Mensaje" class="w-full p-3 rounded-lg bg-pink-50 dark:bg-slate-800 border border-pink-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-softPink"></textarea>
+                    <button type="button" class="w-full bg-cutePurple text-white font-bold py-3 rounded-lg shadow hover:opacity-90">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+        <div class="text-center text-sm text-slate-500 mt-12 border-t border-pink-100 dark:border-slate-800 pt-6">
+            &copy; Sofia Katherine Rojas Taipe. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- LÓGICA JAVASCRIPT INTEGRADA -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // 1. MODO CLARO / MODO OSCURO
+            const themeBtn = document.getElementById('theme-toggle');
+            const themeBtnMobile = document.getElementById('theme-toggle-mobile');
+            const htmlElement = document.documentElement;
+
+            let isDark = localStorage.getItem('theme') === 'dark';
+
+            const updateTheme = () => {
+                if (isDark) {
+                    htmlElement.classList.add('dark');
+                    themeBtn.textContent = '🌙 Modo Oscuro';
+                    themeBtnMobile.textContent = '🌙';
+                } else {
+                    htmlElement.classList.remove('dark');
+                    themeBtn.textContent = '☀️ Modo Claro';
+                    themeBtnMobile.textContent = '☀️';
+                }
+            };
+
+            updateTheme();
+
+            const toggleTheme = () => {
+                isDark = !isDark;
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                updateTheme();
+            };
+
+            themeBtn.addEventListener('click', toggleTheme);
+            themeBtnMobile.addEventListener('click', toggleTheme);
+
+            // 2. MENÚ MÓVIL
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+            });
+
+            // 3. PROYECTOS DINÁMICOS CON REDIRECCIÓN EN EL BOTÓN
+            const projectsContainer = document.getElementById('projects-container');
+            const sortNewestBtn = document.getElementById('sort-newest');
+            const sortOldestBtn = document.getElementById('sort-oldest');
+
+            const projects = [
+                {
+                    title: "Sistema de Gestión Académica 🎓",
+                    description: "Aplicación para el registro de matriculados, notas y asistencias utilizando Java y MySQL.",
+                    image: "images/tar.jpg",
+                    date: "2024-06-15",
+                    year: "2024",
+                    githubUrl: "https://github.com/sofkat520/plataformas"
+                },
+                {
+                    title: "E-Commerce Web Cute 🛍️",
+                    description: "Plataforma de ventas en línea responsive construida con HTML, CSS y manipulación dinámica con JS.",
+                    image: "images/uni.jpg",
+                    date: "2024-11-20",
+                    year: "2024",
+                    githubUrl: "https://github.com/sofkat520/plataformas"
+                },
+                {
+                    title: "App Móvil de Tareas 📱",
+                    description: "Aplicación interactiva para organización personal y seguimiento de actividades pendientes.",
+                    image: "images/web.jpg",
+                    date: "2025-04-10",
+                    year: "2025",
+                    githubUrl: "https://github.com/sofkat520/plataformas"
+                },
+                {
+                    title: "Red de Datos Universitaria 🌐",
+                    description: "Diseño y simulación de la infraestructura de red para un campus en Cisco Packet Tracer.",
+                    image: "images/ges.jpg",
+                    date: "2025-10-05",
+                    year: "2025",
+                    githubUrl: "https://github.com/sofkat520/plataformas"
+                }
+            ];
+
+            const renderProjects = (items) => {
+                projectsContainer.innerHTML = items.map(proj => `
+                    <div class="bg-white dark:bg-cardDark rounded-2xl overflow-hidden shadow-lg border border-pink-100 dark:border-slate-800 flex flex-col justify-between">
+                        <div>
+                            <img src="${proj.image}" alt="${proj.title}" class="w-full h-48 object-cover">
+                            <div class="p-6">
+                                <span class="text-xs font-bold text-softPink bg-pink-100 dark:bg-slate-800 px-3 py-1 rounded-full">Año: ${proj.year}</span>
+                                <h3 class="text-xl font-bold mt-2 mb-2">${proj.title}</h3>
+                                <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">${proj.description}</p>
+                            </div>
+                        </div>
+                        <div class="p-6 pt-0">
+                            <a href="${proj.githubUrl}" target="_blank" rel="noopener noreferrer" class="inline-block text-center w-full bg-pink-100 dark:bg-slate-800 text-cutePurple dark:text-softPink font-bold py-2 rounded-lg hover:bg-cutePurple hover:text-white dark:hover:bg-softPink dark:hover:text-slate-900 transition">Ver más</a>
+                        </div>
+                    </div>
+                `).join('');
+            };
+
+            sortNewestBtn.addEventListener('click', () => {
+                const sorted = [...projects].sort((a, b) => new Date(b.date) - new Date(a.date));
+                renderProjects(sorted);
+                sortNewestBtn.className = "px-4 py-2 bg-cutePurple text-white font-bold rounded-lg text-sm shadow hover:opacity-90";
+                sortOldestBtn.className = "px-4 py-2 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-bold rounded-lg text-sm shadow hover:opacity-90";
+            });
+
+            sortOldestBtn.addEventListener('click', () => {
+                const sorted = [...projects].sort((a, b) => new Date(a.date) - new Date(b.date));
+                renderProjects(sorted);
+                sortOldestBtn.className = "px-4 py-2 bg-cutePurple text-white font-bold rounded-lg text-sm shadow hover:opacity-90";
+                sortNewestBtn.className = "px-4 py-2 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-200 font-bold rounded-lg text-sm shadow hover:opacity-90";
+            });
+
+            // Carga Inicial
+            renderProjects([...projects].sort((a, b) => new Date(b.date) - new Date(a.date)));
+        });
+    </script>
+</body>
+</html>
