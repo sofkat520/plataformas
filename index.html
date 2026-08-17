@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Portafolio - Sofia Katherine Rojas Taipe</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header (1. Navbar Responsive) -->
+					<header id="header" class="alt">
+						<h1><a href="index.html">Sofia Rojas</a></h1>
+						<nav>
+							<button id="theme-toggle" class="button small" style="margin-right: 10px;">☀️ Modo Claro</button>
+							<a href="#menu">Menú</a>
+						</nav>
+					</header>
+
+				<!-- Menu (Navegación del Menú Hamburguesa) -->
+					<nav id="menu">
+						<div class="inner">
+							<h2>Menú</h2>
+							<ul class="links">
+								<li><a href="#banner">Inicio</a></li>
+								<li><a href="#one">Sobre Mí</a></li>
+								<li><a href="#habilidades">Habilidades</a></li>
+								<li><a href="#four">Proyectos</a></li>
+								<li><a href="#footer">Contacto</a></li>
+							</ul>
+							<a href="#" class="close">Cerrar</a>
+						</div>
+					</nav>
+
+				<!-- Banner (2. Hero Section) -->
+					<section id="banner">
+						<div class="inner">
+							<div class="logo"><span class="icon fa-gem"></span></div>
+							<h2>Sofia Katherine Rojas Taipe</h2>
+							<p>Estudiante de Ingeniería de Sistemas — Octavo Semestre</p>
+							<ul class="actions">
+								<li><a href="#four" class="button primary">Ver Mis Proyectos</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- Wrapper -->
+					<section id="wrapper">
+
+						<!-- One (3. Sección Sobre Mí) -->
+						<section id="one" class="wrapper spotlight style1">
+							<div class="inner">
+								<a href="#" class="image"><img src="images/p01.jpg" alt="Sofia Rojas" /></a>
+								<div class="content">
+									<h2 class="major">Sobre Mí</h2>
+									<p>
+										¡Hola! Soy <strong>Sofia Katherine Rojas Taipe</strong>, estudiante del <strong>octavo semestre</strong> de Ingeniería de Sistemas en la Universidad Andina del Cusco (UANDINA). A lo largo de mi formación académica he desarrollado un perfil integral, combinando habilidades en desarrollo web frontend (HTML5, CSS3, JavaScript), programación orientada a objetos (Java, C#) y gestión de bases de datos relacionales (MySQL, SQL Server, PostgreSQL).
+									</p>
+									<p>
+										Me apasiona la tecnología y la arquitectura de software, enfocándome en construir interfaces modernas, responsive y funcionales. Además, cuento con bases sólidas en redes informáticas (simulación en Cisco Packet Tracer) y metodologías ágiles de trabajo como Scrum, lo que me permite adaptarme a proyectos de desarrollo de software end-to-end con control de versiones en Git y GitHub.
+									</p>
+								</div>
+							</div>
+						</section>
+
+						<!-- Two (4. Sección Habilidades) -->
+							<section id="habilidades" class="wrapper alt spotlight style2">
+								<div class="inner">
+									<div class="content" style="width: 100%;">
+										<h2 class="major">Habilidades Técnicas</h2>
+										<p>Tecnologías y herramientas aprendidas durante la carrera:</p>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<ul class="alt">
+													<li><strong>HTML5 & CSS3:</strong> Maquetación semántica y diseño responsive.</li>
+													<li><strong>JavaScript (JS):</strong> Interacción con el DOM y eventos.</li>
+													<li><strong>Git & GitHub:</strong> Control de versiones y trabajo colaborativo.</li>
+												</ul>
+											</div>
+											<div class="col-6 col-12-medium">
+												<ul class="alt">
+													<li><strong>Bases de Datos:</strong> SQL Server, MySQL y PostgreSQL.</li>
+													<li><strong>Programación:</strong> Java, C# y Python básico.</li>
+													<li><strong>Metodologías:</strong> Scrum y desarrollo ágil.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+
+						<!-- Four (5. Sección Proyectos - Grid Responsive) -->
+							<!-- Four (Proyectos con JS Dinámico) -->
+							<section id="four" class="wrapper style1">
+								<div class="inner">
+									<h2 class="major">Proyectos Destacados 💻💖</h2>
+									<p>Proyectos académicos y personales desarrollados durante la carrera:</p>
+									
+									<!-- Botones de ordenamiento por fecha -->
+									<div style="margin-bottom: 25px; display: flex; gap: 10px; flex-wrap: wrap;">
+										<button id="sort-newest" class="button primary small">✨ Más nuevos primero</button>
+										<button id="sort-oldest" class="button small">📜 Más antiguos primero</button>
+									</div>
+
+									<!-- Contenedor donde JS insertará los proyectos dinámicamente -->
+									<section class="features" id="projects-container">
+										<!-- Se llena desde custom.js -->
+									</section>
+								</div>
+							</section>
+
+					</section>
+
+				<!-- Footer (6. Contacto y 7. Footer) -->
+					<section id="footer">
+						<div class="inner">
+							<h2 class="major">Contacto</h2>
+							<p>Si deseas comunicarte conmigo para proyectos o consultas académicas, puedes enviarme un mensaje a través del siguiente formulario o mediante mis datos de contacto directos.</p>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Nombre</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Correo Electrónico</label>
+										<input type="email" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Mensaje</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Enviar Mensaje" /></li>
+								</ul>
+							</form>
+							<ul class="contact">
+								<li class="icon solid fa-phone">927812955</li>
+								<li class="icon solid fa-envelope"><a href="mailto:023200582H@uandina.edu.pe">023200582H@uandina.edu.pe</a></li>
+								<li class="icon brands fa-facebook-f"><a href="https://facebook.com" target="_blank">Sofia Rojas</a></li>
+								<li class="icon brands fa-github"><a href="https://github.com/sofkat520" target="_blank">github.com/sofkat520</a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Sofia Katherine Rojas Taipe. Todos los derechos reservados.</li><li>Diseño: <a href="http://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<!-- Script Personalizado de Interactividad -->
+			<script src="assets/js/custom.js"></script>
+
+	</body>
+</html>
